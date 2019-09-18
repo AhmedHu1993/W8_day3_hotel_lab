@@ -28,6 +28,8 @@ export default {
       .then(bookings => this.bookings = bookings);
     
     eventBus.$on("newBookingAdded", bookings => this.bookings = bookings)
+
+    eventBus.$on("bookingDeleted", bookings => this.bookings = bookings)
   }
 }
 </script>
