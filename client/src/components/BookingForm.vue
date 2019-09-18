@@ -1,16 +1,18 @@
 <template>
   <form v-on:submit="handleSubmit" method="POST">
+      <div class="form-group">
       <label for="name">Name:</label>
-      <input type="text" id="name" v-model="name" required>
-        
+      <input class="form-control" type="text" id="name" v-model="name" required>
+        </div>
+        <div class="form-group">
       <label for="email">Email:</label>
-      <input type="text" id="email" v-model="email" required>
-        
+      <input class="form-control" type="text" id="email" v-model="email" required>
+        </div>
+        <div class="form-group">
       <label for="check-in-status-true">Checked in?</label>
-      <input type="checkbox" id="check-in-status-true" value="true" v-model="checkInStatus">
-
-    <input type="submit">
-
+      <input class="form-control" type="checkbox" id="check-in-status-true" value="true" v-model="checkInStatus">
+        </div>
+    <button type="submit" class="btn btn-success">Add Booking</button>
   </form>
 </template>
 

@@ -1,9 +1,13 @@
 <template>
-    <div>
-        <p>Name: {{booking.name}} </p>
-        <p>Email: {{booking.email}}</p>
-        <p>Check-in Status: {{booking.checkInStatus}}</p>
-        <button @click="handleClick(booking._id)">Delete</button>
+    <div class="card">
+        <div class="card-body">
+            <h3 class="card-title">{{booking.name}} </h3>
+            <div class="card-text"> 
+                <p>Email: {{booking.email}}</p>
+                <p>Check-in Status: {{booking.checkInStatus}}</p>
+            </div>
+            <button class="btn btn-danger" @click="handleClick(booking._id)">Delete</button>
+        </div>
     </div>
 </template>
 
