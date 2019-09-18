@@ -27,7 +27,7 @@ export default {
     BookingService.getBookings()
       .then(bookings => this.bookings = bookings);
     
-    eventBus.$on("newBooking", booking => this.bookings.push(booking))
+    eventBus.$on("newBookingAdded", bookings => this.bookings = bookings)
   }
 }
 </script>

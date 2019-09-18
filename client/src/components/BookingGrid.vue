@@ -2,7 +2,6 @@
   <div> 
     <ul v-for="booking in bookings" :key="booking._id">
       <booking-item :booking="booking"/>
-      </ul>
     </ul>
   </div>
 </template>

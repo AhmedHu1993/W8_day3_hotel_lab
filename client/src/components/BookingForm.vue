@@ -36,8 +36,12 @@ export default {
             email: this.email,
             checkInStatus: this.checkInStatus
         }
-        BookingService.addBooking(newBooking);
-        eventBus.$emit("newBooking", newBooking)
+        BookingService.addBooking(newBooking)
+        .then((docs) => eventBus.$emit("newBookingAdded", docs))
+
+        this.name = null,
+        this.email = null,
+        this.checkInStatus = false
      }
  }   
 }

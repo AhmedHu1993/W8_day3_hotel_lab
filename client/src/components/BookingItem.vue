@@ -1,15 +1,19 @@
 <template>
     <div>
-        <li>Name: {{booking.name}} </li>
-        <li>Email: {{booking.email}}</li>
-        <li>Check-in Status: {{booking.checkInStatus}}</li>
+        <p>Name: {{booking.name}} </p>
+        <p>Email: {{booking.email}}</p>
+        <p>Check-in Status: {{booking.checkInStatus}}</p>
+        <button v-on="handleClick()">Delete</button>
     </div>
 </template>
 
 <script>
 export default {
     name: "booking-item",
-    props: ['booking']
+    props: ['booking'],
+    methods: {
+        handleClick() {}
+    }
 }
 </script>
 
